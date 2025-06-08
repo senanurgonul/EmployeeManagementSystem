@@ -73,6 +73,7 @@ mysql -u root -p calisan_sistemi < veri_tabani/demo.sql
 
    ```bash
    mysql -u root -p calisan_sistemi < veri_tabani/demo.sql
+
 2. `Database` sınıfı içindeki bağlantı bilgilerini (host, kullanıcı adı, şifre) kendine göre güncelle.
 3. IDE üzerinden `GirisEkrani` sınıfını çalıştırarak uygulamayı başlat.
 
