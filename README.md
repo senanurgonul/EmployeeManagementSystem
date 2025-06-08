@@ -49,9 +49,30 @@ Aşağıda projenin sınıf yapısını gösteren UML diyagramı yer almaktadır
 
 ---
 
+## 🗄️ Veritabanı
+
+Projeyle birlikte gelen `veri_tabani/` klasöründe SQL dökümleri yer alır:
+
+- `demo.sql`: Tam veritabanı yapısı (adminler + calisanlar tabloları)
+- `sena_adminler.sql`: Sadece admin giriş tablosu
+- `sena_calisanlar.sql`: Sadece çalışanlar tablosu
+
+### 🔧 Kurulum Adımları
+
+1. MySQL üzerinde bir veritabanı oluştur (örneğin `calisan_sistemi`)
+2. Terminal veya MySQL aracıyla şu komutu çalıştır:
+
+```bash
+mysql -u root -p calisan_sistemi < veri_tabani/demo.sql
+
+---
+
 ## 🚀 Uygulamayı Çalıştırmak İçin
 
-1. MySQL veritabanında gerekli tabloyu oluştur.
+1. MySQL'de bir veritabanı oluştur (örneğin `calisan_sistemi`) ve `veri_tabani/demo.sql` dosyasını içeri aktar:
+
+   ```bash
+   mysql -u root -p calisan_sistemi < veri_tabani/demo.sql
 2. `Database` sınıfı içindeki bağlantı bilgilerini (host, kullanıcı adı, şifre) kendine göre güncelle.
 3. IDE üzerinden `GirisEkrani` sınıfını çalıştırarak uygulamayı başlat.
 
