@@ -57,14 +57,6 @@ Projeyle birlikte gelen `veri_tabani/` klasöründe SQL dökümleri yer alır:
 - `sena_adminler.sql`: Sadece admin giriş tablosu
 - `sena_calisanlar.sql`: Sadece çalışanlar tablosu
 
-### 🔧 Kurulum Adımları
-
-1. MySQL üzerinde bir veritabanı oluştur (örneğin `calisan_sistemi`)
-2. Terminal veya MySQL aracıyla şu komutu çalıştır:
-
-```bash
-mysql -u root -p calisan_sistemi < veri_tabani/demo.sql
-
 ---
 
 ## 🚀 Uygulamayı Çalıştırmak İçin
