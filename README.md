@@ -1,76 +1,74 @@
 # Employee Management System
 
-Bu proje, Java ile geliştirilmiş bir **çalışan yönetim sistemi** uygulamasıdır. Amaç; kullanıcıların çalışanlara ait verileri kolayca görüntüleyebileceği, güncelleyebileceği ve filtreleyebileceği kullanıcı dostu bir arayüz sağlamaktır.
+This project is an **Employee Management System** application developed using Java. The goal is to provide a user-friendly interface where users can easily view, update, and filter employee-related data.
 
 ---
 
-## 🎯 Projenin Amacı
+## 🎯 Project Purpose
 
-Bu uygulama, şirket veya kurumlarda çalışan bilgilerini düzenli, merkezi ve etkileşimli bir şekilde yönetmek amacıyla geliştirilmiştir. Kullanıcı girişinden sonra çalışanların bilgileri görüntülenebilir, yeni çalışanlar eklenebilir, mevcut bilgiler düzenlenebilir ve istenilen kritere göre filtrelenebilir. Tüm işlemler anlık olarak veritabanına kaydedilir.
-
----
-
-## 🧩 Temel Özellikler
-
-- 🔐 Kullanıcı doğrulamalı giriş ekranı
-- 📋 Çalışan kayıtlarını listeleme, ekleme, silme ve güncelleme
-- 🔍 Dinamik arama (isim, departman, maaş gibi kriterlerde)
-- 💾 JDBC ile veritabanı bağlantısı ve veri eşitleme
-- 🖥️ Basit ve kullanıcı dostu grafik arayüz
+This application is designed to help organizations manage employee information in an organized, centralized, and interactive manner. After logging in, users can view employee data, add new employees, edit existing records, and filter data based on desired criteria. All operations are instantly saved to the database.
 
 ---
 
-## 📦 Kullanılan Teknolojiler
+## 🧩 Key Features
 
-- **Java SE (Swing GUI)**
-- **JDBC** – Veritabanı bağlantısı için
-- **MySQL** – Veri saklama ve sorgulama için
-- **NetBeans** – IDE (Geliştirme Ortamı)
-
----
-
-## 🧱 Sınıf Diyagramı
-
-Aşağıda projenin sınıf yapısını gösteren UML diyagramı yer almaktadır:
-
-![Sınıf Diyagramı](SınıfDiyagramı.png)
+- 🔐 Login screen with user authentication  
+- 📋 List, add, delete, and update employee records  
+- 🔍 Dynamic search (by name, department, salary, etc.)  
+- 💾 JDBC-based database connectivity and synchronization  
+- 🖥️ Simple and user-friendly graphical interface  
 
 ---
 
-## 🗂️ Sınıflar ve Görevleri
+## 📦 Technologies Used
 
-| Sınıf Adı           | Görevi |
-|---------------------|--------|
-| `Calisan`           | Çalışan verilerini tutan model sınıf |
-| `CalisanEkrani`     | Çalışan listesini ve arama işlemlerini yöneten arayüz |
-| `CalisanIslemleri`  | Ekleme, silme, güncelleme ve sorgulama işlemleri |
-| `Database`          | Veritabanı bağlantısını sağlayan sınıf |
-| `GirisEkrani`       | Sisteme kullanıcı girişi yapılan arayüz |
+- **Java SE (Swing GUI)**  
+- **JDBC** – For database connectivity  
+- **MySQL** – For data storage and querying  
+- **NetBeans** – IDE (Development Environment)  
 
 ---
 
-## 🗄️ Veritabanı
+## 🧱 Class Diagram
 
-Projeyle birlikte gelen `veri_tabani/` klasöründe SQL dökümleri yer alır:
+Below is the UML diagram showing the class structure of the project:
 
-- `demo.sql`: Tam veritabanı yapısı (adminler + calisanlar tabloları)
-- `sena_adminler.sql`: Sadece admin giriş tablosu
-- `sena_calisanlar.sql`: Sadece çalışanlar tablosu
+![Class Diagram](SınıfDiyagramı.png)
 
 ---
 
-## 🚀 Uygulamayı Çalıştırmak İçin
+## 🗂️ Classes and Responsibilities
 
-1. MySQL'de bir veritabanı oluştur (örneğin `calisan_sistemi`) ve `veri_tabani/demo.sql` dosyasını içeri aktar:
+| Class Name          | Responsibility |
+|---------------------|----------------|
+| `Calisan`           | Model class holding employee data |
+| `CalisanEkrani`     | UI for employee listing and search operations |
+| `CalisanIslemleri`  | Handles add, delete, update, and query operations |
+| `Database`          | Manages database connection |
+| `GirisEkrani`       | Login interface for system access |
+
+---
+
+## 🗄️ Database
+
+The `veri_tabani/` folder contains the SQL dump files for the project:
+
+- `demo.sql`: Complete database structure (admins + employees tables)  
+- `sena_adminler.sql`: Admin login table only  
+- `sena_calisanlar.sql`: Employees table only  
+
+---
+
+## 🚀 How to Run the Application
+
+1. Create a database in MySQL (e.g., `calisan_sistemi`) and import the `demo.sql` file:
 
    ```bash
    mysql -u root -p calisan_sistemi < veri_tabani/demo.sql
 
-2. `Database` sınıfı içindeki bağlantı bilgilerini (host, kullanıcı adı, şifre) kendine göre güncelle.
-3. IDE üzerinden `GirisEkrani` sınıfını çalıştırarak uygulamayı başlat.
+2. Update the connection information (host, username, password) in the `Database` class according to your needs.
+3. Start the application by running the `GirisEkrani` class from the IDE.
 
 ---
 
-## 📜 Lisans
-
-Bu proje eğitim ve öğrenme amaçlı geliştirilmiştir. Açık kaynak olarak geliştirilmeye açıktır.
+This project has been developed for educational and learning purposes. It is open source and available for further development.
